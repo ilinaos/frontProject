@@ -1,7 +1,10 @@
-import './style.css'
+import './style.pcss'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
+import {worker} from "./src/mocks/browser.js";
+
+
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -22,3 +25,25 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+// if (process.env.NODE_ENV === 'development') {
+//     const { worker } = require('./mocks/browser')
+//     worker.start()
+// }
+const runApp = async () => {
+    switch (process.env.NODE_ENV) {
+        case "development":
+            await import("./src/mocks/browser.js")
+                .then(async ({ worker }) => {
+                    await worker.start().then(() => {
+                        console.debug("App dev run")
+                    })
+                })
+
+    }
+}
+
+runApp()
+    .catch((err) => {
+        console.error(err)
+    })
