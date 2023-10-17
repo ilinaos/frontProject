@@ -1,5 +1,5 @@
 import "./styles/style.pcss"
-import { worker } from "../shared/api/browser.js";
+// import { worker } from "../shared/api/browser.js";
 
 const runApp = async () => {
     switch (process.env.NODE_ENV) {
