@@ -1,11 +1,11 @@
-export default () => {
+export default (text = "", className="") => {
 return `
-    <button className="page__button">Click Me!</button>
-<script >
-let button = document.querySelector(".page__button")
-button.addEventListener("click", function() {
-    
-});</script>
+    <button class="${className}">${text}</button>
+<!--<script >-->
+<!--let button = document.querySelector(".page__button")-->
+<!--button.addEventListener("click", function() {-->
+<!--    -->
+<!--});</script>-->
 
 `
 };

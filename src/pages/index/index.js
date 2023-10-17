@@ -18,8 +18,8 @@ export default () => {
                 </ul>
             </nav>
             
-            <div>${inputTxt()}</div>
-            <div>${btn()}</div>
+            <div>${inputTxt("your text")}</div>
+            <div>${btn("clicker")}</div>
 
             
         `

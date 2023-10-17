@@ -1,10 +1,10 @@
-export default () => {
+export default (placeholder="", className="") => {
     return `
-    <input type="text" className="page__input" placeholder="Ваш текст">
-<script >
-let input = document.querySelector(".page__input")
-input.addEventListener("input", function() {
-    return input.value;
-});</script>
+    <input type="text" class="${className}" placeholder="${placeholder}">
+<!--<script >-->
+<!--let input = document.querySelector(".page__input")-->
+<!--input.addEventListener("input", function() {-->
+<!--    return input.value;-->
+<!--});</script>-->
     `
 }
