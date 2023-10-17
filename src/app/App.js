@@ -1,4 +1,4 @@
-import "./style.pcss"
+import "./styles/style.pcss"
 import { worker } from "../shared/api/browser.js";
 
 const runApp = async () => {

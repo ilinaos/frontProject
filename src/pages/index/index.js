@@ -1,12 +1,12 @@
 import { getPage } from "../../shared/lib/index.js";
+import btn from "../../shared/ui/button/button.js"
+import inputTxt from "../../shared/ui/input/input.js"
 
 export default () => {
-
     return getPage({
         title: "Главная",
         body: `
-            <h1>Главная</h1>
-            
+            <h1>Главная</h1>            
             <nav>
                 <ul>
                     <li>
@@ -17,6 +17,11 @@ export default () => {
                     </li>
                 </ul>
             </nav>
+            
+            <div>${inputTxt()}</div>
+            <div>${btn()}</div>
+
+            
         `
     })
 }

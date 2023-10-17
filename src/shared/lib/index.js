@@ -1,4 +1,3 @@
-// import {} from
 export const getPage = ({ body = ``, title = ``, meta = [] }) => {
     return `
       <!DOCTYPE html>
