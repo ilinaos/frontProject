@@ -1,6 +1,6 @@
-export default (text = "", className="") => {
+export default (text = "", className="button", state="_isEnable") => {
 return `
-    <button class="${className}">${text}</button>
+    <button class="${className}${state}">${text}</button>
 <!--<script >-->
 <!--let button = document.querySelector(".page__button")-->
 <!--button.addEventListener("click", function() {-->

@@ -19,9 +19,12 @@ export default () => {
             </nav>
             
             <div>${inputTxt("your text")}</div>
-            <div>${btn("clicker")}</div>
+            <div>${btn("clicker", "button", "_isEnable")}</div>
 
             
-        `
+        `,
+        meta: [
+
+        ]
     })
 }
