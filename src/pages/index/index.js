@@ -1,6 +1,6 @@
 import { getPage } from "../../shared/lib/index.js";
-import btn from "../../shared/ui/button/button.js"
-import inputTxt from "../../shared/ui/input/input.js"
+import { Button } from "../../shared/ui/button/button.js"
+import { Input } from "../../shared/ui/input/input.js"
 
 export default () => {
     return getPage({
@@ -17,9 +17,28 @@ export default () => {
                     </li>
                 </ul>
             </nav>
+            ${Input({
+            type: "text", 
+            placeholder: "your text",
+            extraAttrs: {
+                
+            }, 
+            extraClasses: {
+                
+            }
+            })}
             
-            <div>${inputTxt("your text")}</div>
-            <div>${btn("clicker", "button", "_isEnable")}</div>
+            ${Button({
+            label: "click me",
+            extraAttrs: {
+                "data-js-required": true,
+                "id": "btn"
+            },
+            extraClasses: {
+                
+            }
+        })}
+            
 
             
         `,
