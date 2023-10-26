@@ -5,7 +5,6 @@ import { Button } from "../../shared/ui/button/button.js"
 import { Input } from "../../shared/ui/input/input.js"
 
 
-
 export default () => {
     return getPage({
         title: "Главная",

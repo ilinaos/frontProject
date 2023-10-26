@@ -7,7 +7,7 @@ const runApp = async () => {
     new HeaderModel()
         new FilterModel()
 
-    await Promise.all(Object.keys(import.meta.glob("../**/*.pcss", {"query": "?inline"})).map(path => import(`${path}`).then((module) => module?.default ?? module)))
+    await Promise.all(Object.keys(import.meta.glob("../**/*.pcss", { "query": "?inline" })).map(path => import(`${path}`).then((module) => module?.default ?? module)))
 
 }
 switch (process.env.NODE_ENV) {
