@@ -1,11 +1,24 @@
 import { getPage } from "../../shared/lib/index.js";
+import { Header } from "../../widgets/header/index.js";
+import { Footer } from "../../widgets/footer/index.js";
 import { Button } from "../../shared/ui/button/button.js"
 import { Input } from "../../shared/ui/input/input.js"
+
+
 
 export default () => {
     return getPage({
         title: "Главная",
         body: `
+
+
+${Header(
+            {
+                extraClasses: {},
+                extraAttrs: {},
+
+            }
+        )}
             <h1>Главная</h1>            
             <nav>
                 <ul>
@@ -14,6 +27,9 @@ export default () => {
                     </li>
                     <li>
                         <a href="/about.html">О Нас</a>
+                    </li>
+                    <li>
+                        <a href="/catalog.html">Каталог</a>
                     </li>
                 </ul>
             </nav>
@@ -38,7 +54,13 @@ export default () => {
                 
             }
         })}
-            
+             ${Footer(
+            {
+                extraClasses: {},
+                extraAttrs: {},
+
+            }
+        )}
 
             
         `,

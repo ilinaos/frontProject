@@ -1,7 +1,7 @@
 import { commonComponentProps, getAttrs } from "../../../shared/lib/index.js";
 
 export function Input (props) {
-    const { type = "", placeholder="", extraClasses = {}, extraAttrs = {}, baseClass = "btn", getCN, children } = { ...commonComponentProps, ...props }
+    const { type = "", placeholder="", extraClasses = {}, extraAttrs = {}, baseClass = "input", getCN, children } = { ...commonComponentProps, ...props }
 
     const getClassName = (elem, mod) => getCN(baseClass, elem, mod)
 
