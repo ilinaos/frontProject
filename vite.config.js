@@ -1,7 +1,7 @@
 import { defineConfig } from "vite"
 import { createHtmlPlugin } from "vite-plugin-html"
 import mainPage from "./src/pages/index/index.js"
-import aboutPage from "./src/pages/about/about.js"
+import cartPage from "./src/pages/cart/cart.js"
 import catalogPage from "./src/pages/catalog/catalog.js"
 
 const pages = [
@@ -10,8 +10,8 @@ const pages = [
         content: mainPage()
     },
     {
-        name: "about",
-        content: aboutPage()
+        name: "cart",
+        content: cartPage()
     },
     {
         name: "catalog",

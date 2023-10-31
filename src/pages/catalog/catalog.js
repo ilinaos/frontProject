@@ -60,7 +60,7 @@ export default () => {
                         <a href="/">Главная</a>
                     </li>
                     <li>
-                        <a href="/about.html">О Нас</a>
+                        <a href="/cart.html">Корзина</a>
                     </li>
                     <li>
                         <a href="/catalog.html">Каталог</a>

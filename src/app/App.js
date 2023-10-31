@@ -16,12 +16,16 @@ switch (process.env.NODE_ENV) {
                 .then(async ({ worker }) => {
                     await worker.start().then(() => {
                         console.debug("App dev run")
-                        runWidgets()
+
                     })
                 })
 
+
     }
+
+    await runWidgets()
 }
+
 
 runApp()
     .catch((err) => {

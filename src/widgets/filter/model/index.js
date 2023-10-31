@@ -25,6 +25,8 @@ this.url = new URL(window.location.href)
     checkboxChanged(ev){
         console.debug(ev)
         console.debug(this.inputs)
+        //метод билдера, принимает значение чекбокса, собирает выбранные, посылает запрос на бэк
+        //обновить через innerhtml
     }
 
     init(){

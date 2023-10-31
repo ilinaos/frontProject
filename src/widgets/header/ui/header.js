@@ -17,7 +17,13 @@ export function Header(props) {
             <div class="${getClassName("logo")}">
                 ${Logo({ imgSrc: "./icons/logo.svg" })}
             </div>
-            <nav class="${getClassName("nav")}">header-menu</nav>
+            <nav class="${getClassName("nav")}">
+            <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/catalog.html">Каталог</a></li>
+            <li><a href="/cart.html">Корзина</a></li>
+            </ul>
+</nav>
             </header>
             `
 }

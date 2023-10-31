@@ -8,6 +8,7 @@ export default class HeaderModel {
             return HeaderModel.instance;
         }
         this.node = document.querySelector(HeaderModel.selector);
+        console.debug(this.node)
         HeaderModel.instance = this;
     }
 }

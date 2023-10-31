@@ -25,7 +25,7 @@ ${Header(
                         <a href="/">Главная</a>
                     </li>
                     <li>
-                        <a href="/about.html">О Нас</a>
+                        <a href="/cart.html">Корзина</a>
                     </li>
                     <li>
                         <a href="/catalog.html">Каталог</a>
@@ -33,15 +33,11 @@ ${Header(
                 </ul>
             </nav>
             ${Input({
-            type: "text", 
+            type: "text",
             placeholder: "your text",
-            extraAttrs: {
-                
-            }, 
-            extraClasses: {
-                
-            }
-            })}
+            extraAttrs: {},
+            extraClasses: {}
+        })}
             
             ${Button({
             label: "click me",
@@ -49,9 +45,7 @@ ${Header(
                 "data-js-required": true,
                 "id": "btn"
             },
-            extraClasses: {
-                
-            }
+            extraClasses: {}
         })}
              ${Footer(
             {

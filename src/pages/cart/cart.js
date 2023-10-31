@@ -4,7 +4,7 @@ import { Footer } from "../../widgets/footer/index.js";
 
 export default () => {
     return getPage({
-        title: "О нас",
+        title: "Корзина",
         body: `
         ${Header(
             {
@@ -13,14 +13,14 @@ export default () => {
 
             }
         )}
-            <h1>О нас</h1>
+            <h1>Корзина</h1>
             <nav>
                 <ul>
                     <li>
                         <a href="/">Главная</a>
                     </li>
                     <li>
-                        <a href="/about.html">О Нас</a>
+                        <a href="/cart.html">Корзина</a>
                     </li>
                     <li>
                         <a href="/catalog.html">Каталог</a>
