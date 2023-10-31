@@ -1,6 +1,6 @@
 export default class FilterModel {
     static selectors={
-        instanceSelector: "data-js-filter",
+        instanceSelector: "[data-js-filter]",
         checkboxSelectors: "data-js-search-params"
     };
 
@@ -14,24 +14,27 @@ export default class FilterModel {
         FilterModel.instance = document.querySelector(FilterModel.selectors.instanceSelector)
         this.inputs = Array.from(document.querySelectorAll(`[${FilterModel.selectors.checkboxSelectors}]`))
 this.url = new URL(window.location.href)
-        console.debug(this.inputs)
+        // eslint-disable-next-line no-console
+        console.log(this.inputs)
         this.init()
     }
 
-    getSearchParam(btn){
-        return btn.getAttribute(FilterModel.selectors.checkboxSelectors)
+    getSearchParam(checkbox){
+        return checkbox.getAttribute(FilterModel.selectors.checkboxSelectors)
     }
 
-    checkboxChanged(ev){
-        console.debug(ev)
-        console.debug(this.inputs)
+    checkboxChanged(ev, input){
+        // eslint-disable-next-line no-console
+        console.log(ev)
+        // eslint-disable-next-line no-console
+        console.log(input)
         //метод билдера, принимает значение чекбокса, собирает выбранные, посылает запрос на бэк
         //обновить через innerhtml
     }
 
     init(){
-        this.inputs.forEach(function (input) {
-            input.addEventListener("change", this.checkboxChanged)
+        this.inputs.forEach((input) => {
+            input.addEventListener("change", this.checkboxChanged.bind(this, input))
         })
     }
 }

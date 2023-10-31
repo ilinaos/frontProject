@@ -1,5 +1,24 @@
 import { commonComponentProps, getAttrs } from "../../../shared/lib";
 import { Logo } from "../../../shared/ui/logo/index.js";
+import { Menu } from "../../../shared/ui/menu/index.js"
+
+const menuItemsText = [
+    {
+        name: "Главная",
+        pageSrc: "../../../index.html"
+    },
+    {
+        name: "Каталог",
+        pageSrc: "../../../catalog.html"
+    },
+    {
+        name: "Корзина",
+        pageSrc: "../../../cart.html"
+    } ]
+let menuItems = []
+for (const menuItem of menuItemsText) {
+    menuItems.push(`<a href="${menuItem.pageSrc}">${menuItem.name}</a>`)
+}
 
 export function Header(props) {
 
@@ -18,11 +37,7 @@ export function Header(props) {
                 ${Logo({ imgSrc: "./icons/logo.svg" })}
             </div>
             <nav class="${getClassName("nav")}">
-            <ul>
-            <li><a href="/">Главная</a></li>
-            <li><a href="/catalog.html">Каталог</a></li>
-            <li><a href="/cart.html">Корзина</a></li>
-            </ul>
+            ${Menu({ menuItems: menuItems })}
 </nav>
             </header>
             `

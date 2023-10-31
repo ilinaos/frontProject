@@ -107,3 +107,20 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.menu{
+  display: flex;
+  width: fit-content;
+  list-style: none;
+  align-items: center;
+  &__item{
+    color: #91A2B6;
+    border-bottom: 4px solid transparent;
+  }
+
+  &__item:hover a{
+    border-bottom: 4px solid #3761E9;
+    font-weight: 500;
+    color: #333338;
+  }
+}

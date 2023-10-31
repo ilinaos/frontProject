@@ -1,5 +1,5 @@
 export default class HeaderModel {
-    static selector = "data-js-header";
+    static selector = "[data-js-header]";
 
     static instance=null;
 
@@ -8,7 +8,8 @@ export default class HeaderModel {
             return HeaderModel.instance;
         }
         this.node = document.querySelector(HeaderModel.selector);
-        console.debug(this.node)
+        // eslint-disable-next-line no-console
+        console.log(this.node)
         HeaderModel.instance = this;
     }
 }
