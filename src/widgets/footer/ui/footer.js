@@ -1,4 +1,28 @@
 import { commonComponentProps, getAttrs } from "../../../shared/lib";
+import { Menu } from "../../../shared/ui/menu/index.js"
+
+const menuItemsText = [
+    {
+        name: "Курсы",
+        pageSrc: ""
+    },
+    {
+        name: "О нас",
+        pageSrc: ""
+    },
+    {
+        name: "Отзывы",
+        pageSrc: ""
+    },
+    {
+        name: "Контакты",
+        pageSrc: ""
+    },
+]
+let footerMenuItems = []
+for (const menuItem of menuItemsText) {
+    footerMenuItems.push(`<a href="${menuItem.pageSrc}">${menuItem.name}</a>`)
+}
 
 export function Footer (props){
     const {
@@ -12,10 +36,21 @@ export function Footer (props){
 
     return `
     <footer class="${getClassName("", extraClasses)}" ${getAttrs(extraAttrs)} data-js-footer="" >
-    <div>
-    <nav>same menu</nav><div>same text</div>
+    <div class="${getClassName("first", extraClasses)}" ${getAttrs(extraAttrs)}>
+    <nav class="${getClassName("nav")}">
+            ${Menu({ menuItems: footerMenuItems })}
+</nav>
+<div><a href="">Политика конфиденциальности</a></div>
 </div>
-    <div>same text</div>
+    <div class="${getClassName("second", extraClasses)}" ${getAttrs(extraAttrs)}>
+    <div class="${getClassName("contacts", extraClasses)}" ${getAttrs(extraAttrs)}>
+    <p>Наш адрес</p><p>г. Челябинск, ул. Лесопарковая 5/2</p>
+</div>
+    <div class="${getClassName("contacts", extraClasses)}" ${getAttrs(extraAttrs)}>
+    <p>Эл. почта</p><p>info@d-element.ru</p>
+</div>
+    
+</div>
 
 </footer>
     `

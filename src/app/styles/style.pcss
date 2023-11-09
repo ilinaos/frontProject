@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', 'sans-serif';
   line-height: 1.5;
   font-weight: 400;
   font-size: 0.8em;
@@ -13,6 +15,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.content-container{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 body {
@@ -113,9 +121,13 @@ button:focus-visible {
   width: fit-content;
   list-style: none;
   align-items: center;
+  padding: 0;
   &__item{
     color: #91A2B6;
     border-bottom: 4px solid transparent;
+    +.menu__item{
+      margin-left: 0.5em;
+    }
   }
 
   &__item:hover a{

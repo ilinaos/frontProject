@@ -15,9 +15,9 @@ const menuItemsText = [
         name: "Корзина",
         pageSrc: "../../../cart.html"
     } ]
-let menuItems = []
+let headerMenuItems = []
 for (const menuItem of menuItemsText) {
-    menuItems.push(`<a href="${menuItem.pageSrc}">${menuItem.name}</a>`)
+    headerMenuItems.push(`<a href="${menuItem.pageSrc}">${menuItem.name}</a>`)
 }
 
 export function Header(props) {
@@ -37,7 +37,7 @@ export function Header(props) {
                 ${Logo({ imgSrc: "./icons/logo.svg" })}
             </div>
             <nav class="${getClassName("nav")}">
-            ${Menu({ menuItems: menuItems })}
+            ${Menu({ menuItems: headerMenuItems })}
 </nav>
             </header>
             `
