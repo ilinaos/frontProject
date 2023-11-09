@@ -2,6 +2,7 @@ import { getPage } from "../../shared/lib/index.js";
 import { Header } from "../../widgets/header/index.js";
 import { Footer } from "../../widgets/footer/index.js";
 import { Filter } from "../../widgets/filter/index.js";
+import { catalogCard } from "../../entities/catalog-card/ui/index.js";
 
 // const cat = [
 //     {
@@ -56,12 +57,20 @@ export default () => {
         )}
             <h1>Каталог</h1>
            
-           
+           <div class="catalogContent">
            
             ${Filter({ category: cat })}
             <section class="goods">
-            
+            ${catalogCard()}
+            ${catalogCard()}
+            ${catalogCard()}
+            ${catalogCard()}
+            ${catalogCard()}
+            ${catalogCard()}
+            ${catalogCard()}
+            ${catalogCard()}
 </section>
+</div>
             </div>
              ${Footer(
             {

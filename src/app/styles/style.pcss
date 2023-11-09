@@ -2,7 +2,6 @@
 @import "variables.pcss";
 
 :root {
-
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -16,21 +15,17 @@
     font-weight: 400;
     font-size: 1em;
     background-color: var(--white);
-    text-decoration: none;
-
-
-}
-
-a {
     color: var(--neutral-dark);
     text-decoration: none;
+
+
 }
+
 
 .content-container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
-
 }
 
 h1 {
@@ -44,14 +39,6 @@ h1 {
     padding: 0.5em;
     will-change: filter;
     transition: filter 300ms;
-}
-
-.logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vanilla:hover {
-    filter: drop-shadow(0 0 2em #f7df1eaa);
 }
 
 .card {
@@ -69,7 +56,7 @@ button {
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
+    background-color: var(--accent-primary-dark);
     cursor: pointer;
     transition: border-color 0.25s;
     margin: 0.5em;

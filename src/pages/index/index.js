@@ -1,6 +1,7 @@
 import { commonComponentProps, getAttrs, getPage } from "../../shared/lib/index.js";
 import { Header } from "../../widgets/header/index.js";
 import { Footer } from "../../widgets/footer/index.js";
+import { catalogCard } from "../../entities/catalog-card/ui/index.js";
 // import { Button } from "../../shared/ui/button/button.js"
 // import { Input } from "../../shared/ui/input/input.js"
 
@@ -30,7 +31,16 @@ ${Header(
         )}
               
 <section class="popular" ${getAttrs(extraAttrs)}>
-Здесь будет слайдер
+<swiper-container class="mySwiper" navigation="true">
+    <swiper-slide>${catalogCard()}</swiper-slide>
+    <swiper-slide>${catalogCard()}</swiper-slide>
+    <swiper-slide>${catalogCard()}</swiper-slide>
+    <swiper-slide>${catalogCard()}</swiper-slide>
+    <swiper-slide>${catalogCard()}</swiper-slide>
+    <swiper-slide>${catalogCard()}</swiper-slide>
+    <swiper-slide>${catalogCard()}</swiper-slide>
+  </swiper-container>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </section>
 
 <section class="FAQ" ${getAttrs(extraAttrs)}>
@@ -48,7 +58,7 @@ ${Header(
         <p class="${getClassName("FAQ", "text", extraClasses)} " ${getAttrs(extraAttrs)}>Записывайтесь и получайте новые знания! Делайте репост и отправляйте друзьям, которым эта новость будет полезна.</p>
         <p class="${getClassName("FAQ", "miniHeader", extraClasses)} " ${getAttrs(extraAttrs)}>Ждем вас на наших курсах!</p>
     </div>
-    <div><img src="./img/qr.png" alt="qr-код"/></div>
+    <div><img src="src/pages/index/img/qr.png" alt="qr-код"/></div>
 </div>
 </div>
 </section>
