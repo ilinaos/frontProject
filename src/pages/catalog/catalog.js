@@ -46,6 +46,7 @@ export default () => {
     return getPage({
         title: "Каталог",
         body: `
+<div class="content-container">
         ${Header(
             {
                 extraClasses: {},
@@ -54,20 +55,14 @@ export default () => {
             }
         )}
             <h1>Каталог</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/">Главная</a>
-                    </li>
-                    <li>
-                        <a href="/cart.html">Корзина</a>
-                    </li>
-                    <li>
-                        <a href="/catalog.html">Каталог</a>
-                    </li>
-                </ul>
-            </nav>
+           
+           
+           
             ${Filter({ category: cat })}
+            <section class="goods">
+            
+</section>
+            </div>
              ${Footer(
             {
                 extraClasses: {},

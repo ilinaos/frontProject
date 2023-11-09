@@ -8,7 +8,7 @@ const menuItemsText = [
     },
     {
         name: "О нас",
-        pageSrc: ""
+        pageSrc: "../../../index.html"
     },
     {
         name: "Отзывы",
@@ -44,10 +44,12 @@ export function Footer (props){
 </div>
     <div class="${getClassName("second", extraClasses)}" ${getAttrs(extraAttrs)}>
     <div class="${getClassName("contacts", extraClasses)}" ${getAttrs(extraAttrs)}>
-    <p>Наш адрес</p><p>г. Челябинск, ул. Лесопарковая 5/2</p>
+    <p class="${getClassName("title", extraClasses)}">Наш адрес</p>
+    <p class="${getClassName("info", extraClasses)}">г. Челябинск, ул. Лесопарковая 5/2</p>
 </div>
     <div class="${getClassName("contacts", extraClasses)}" ${getAttrs(extraAttrs)}>
-    <p>Эл. почта</p><p>info@d-element.ru</p>
+    <p class="${getClassName("title", extraClasses)}">Эл. почта</p>
+    <p class="${getClassName("info", extraClasses)}">info@d-element.ru</p>
 </div>
     
 </div>

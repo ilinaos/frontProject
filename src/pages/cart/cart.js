@@ -6,6 +6,7 @@ export default () => {
     return getPage({
         title: "Корзина",
         body: `
+<div class="content-container">
         ${Header(
             {
                 extraClasses: {},
@@ -14,19 +15,13 @@ export default () => {
             }
         )}
             <h1>Корзина</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/">Главная</a>
-                    </li>
-                    <li>
-                        <a href="/cart.html">Корзина</a>
-                    </li>
-                    <li>
-                        <a href="/catalog.html">Каталог</a>
-                    </li>
-                </ul>
-            </nav>
+          
+          
+          <div class="order-area"><section class="cards"></section>
+          <section class="order-form"></section>
+          </div>
+          <p class="to-catalog"><a href="../../../catalog.html">Продолжить покупки</a></p>
+          </div>
              ${Footer(
             {
                 extraClasses: {},
