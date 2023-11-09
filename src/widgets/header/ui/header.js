@@ -4,15 +4,15 @@ import { Menu } from "../../../shared/ui/menu/index.js"
 
 const menuItemsText = [
     {
-        name: "Главная",
+        name: "ГЛАВНАЯ",
         pageSrc: "../../../index.html"
     },
     {
-        name: "Каталог",
+        name: "КАТАЛОГ",
         pageSrc: "../../../catalog.html"
     },
     {
-        name: "Корзина",
+        name: "КОРЗИНА",
         pageSrc: "../../../cart.html"
     } ]
 let headerMenuItems = []

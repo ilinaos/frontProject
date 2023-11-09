@@ -3,19 +3,19 @@ import { Menu } from "../../../shared/ui/menu/index.js"
 
 const menuItemsText = [
     {
-        name: "Курсы",
+        name: "КУРСЫ",
         pageSrc: ""
     },
     {
-        name: "О нас",
+        name: "О НАС",
         pageSrc: "../../../index.html"
     },
     {
-        name: "Отзывы",
+        name: "ОТЗЫВЫ",
         pageSrc: ""
     },
     {
-        name: "Контакты",
+        name: "КОНТАКТЫ",
         pageSrc: ""
     },
 ]

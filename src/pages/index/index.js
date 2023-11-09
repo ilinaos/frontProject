@@ -1,9 +1,7 @@
 import { commonComponentProps, getAttrs, getPage } from "../../shared/lib/index.js";
 import { Header } from "../../widgets/header/index.js";
 import { Footer } from "../../widgets/footer/index.js";
-import { catalogCard } from "../../entities/catalog-card/ui/index.js";
-// import { Button } from "../../shared/ui/button/button.js"
-// import { Input } from "../../shared/ui/input/input.js"
+import { Slider } from "../../widgets/slider/index.js";
 
 
 export default (props) => {
@@ -31,16 +29,8 @@ ${Header(
         )}
               
 <section class="popular" ${getAttrs(extraAttrs)}>
-<swiper-container class="mySwiper" navigation="true">
-    <swiper-slide>${catalogCard()}</swiper-slide>
-    <swiper-slide>${catalogCard()}</swiper-slide>
-    <swiper-slide>${catalogCard()}</swiper-slide>
-    <swiper-slide>${catalogCard()}</swiper-slide>
-    <swiper-slide>${catalogCard()}</swiper-slide>
-    <swiper-slide>${catalogCard()}</swiper-slide>
-    <swiper-slide>${catalogCard()}</swiper-slide>
-  </swiper-container>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<h1>Популярные товары</h1>
+${Slider()}
 </section>
 
 <section class="FAQ" ${getAttrs(extraAttrs)}>
