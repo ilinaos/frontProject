@@ -27,20 +27,42 @@ import { catalogCard } from "../../entities/catalog-card/ui/index.js";
 const cat = [
     {
 
-            name: "Все курсы",
-            searchParam: "all",
-            isChecked: true
-        },
+        name: "Все курсы",
+        searchParam: "all",
+        isActive: true
+    },
     {
-            name: "Фронтенд",
-            searchParam: "front",
-            isChecked: false
-        },
-        {
-            name: "Бэкенд",
-            searchParam: "back",
-            isChecked: false
-        },
+        name: "Бэкенд-разработка",
+        searchParam: "backend",
+        isActive: false
+    },
+    {
+        name: "Веб-разработка",
+        searchParam: "web",
+        isActive: false
+    },
+    {
+        name: "Мобильная разработка",
+        searchParam: "mobile",
+        isActive: false
+    },
+
+    {
+        name: "Анализ данных",
+        searchParam: "data",
+        isActive: false
+    },
+
+    {
+        name: "IT-инфраструктура",
+        searchParam: "it",
+        isActive: false
+    },
+    {
+        name: "Управление разработкой",
+        searchParam: "management",
+        isActive: false
+    },
 
 ]
 export default () => {

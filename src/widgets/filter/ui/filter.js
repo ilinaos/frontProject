@@ -8,23 +8,18 @@ export function Filter(props) {
         baseClass = "filter",
         getCN,
         category,
-    } = { ...commonComponentProps, ...props }
+    } = { ...commonComponentProps, ...props };
 
-    const getClassName = (elem, mod) => getCN(baseClass, elem, mod)
+    const getClassName = (elem, mod) => getCN(baseClass, elem, mod);
 
     return `
             <section class="${getClassName("", extraClasses)}" ${getAttrs(extraAttrs)} data-js-filter="" >
-            ${category.map(cat => `<label>
-<input type="checkbox" value="${cat.searchParam}" class="${getClassName("checkbox")}" data-js-search-params="${cat.searchParam}">${cat.name}
-</label>`).join("") 
-    }            
+            ${category.map(cat => `
+<button data-js-search-params="${cat.searchParam}" class="${getClassName("button")} _isActive_${cat.isActive} button">
+${cat.name}
+</button>`).join("") }
 </section>
             `
 }
 
 
-
-// ${category.map(cat => `
-// <button data-js-search-param="${cat.searchParam}" class="${getClassName("btn")}">
-// ${cat.name}
-// </button>`).join("") }

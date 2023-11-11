@@ -8,8 +8,6 @@ export default class HeaderModel {
             return HeaderModel.instance;
         }
         this.node = document.querySelector(HeaderModel.selector);
-        // eslint-disable-next-line no-console
-        console.log(this.node)
         HeaderModel.instance = this;
     }
 }

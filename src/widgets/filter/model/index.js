@@ -1,7 +1,7 @@
 export default class FilterModel {
     static selectors={
         instanceSelector: "[data-js-filter]",
-        checkboxSelectors: "data-js-search-params"
+        btnSelectors: "data-js-search-params"
     };
 
     static instance = null
@@ -12,29 +12,29 @@ export default class FilterModel {
         }
 
         FilterModel.instance = document.querySelector(FilterModel.selectors.instanceSelector)
-        this.inputs = Array.from(document.querySelectorAll(`[${FilterModel.selectors.checkboxSelectors}]`))
+        this.btns = Array.from(document.querySelectorAll(`[${FilterModel.selectors.btnSelectors}]`))
 this.url = new URL(window.location.href)
         // eslint-disable-next-line no-console
-        console.log(this.inputs)
+        console.log(this.btns)
         this.init()
     }
 
-    getSearchParam(checkbox){
-        return checkbox.getAttribute(FilterModel.selectors.checkboxSelectors)
+    getSearchParam(btn){
+        return btn.getAttribute(FilterModel.selectors.btnSelectors)
     }
 
-    checkboxChanged(ev, input){
+    buttonClick(ev, clickedBtn){
         // eslint-disable-next-line no-console
         console.log(ev)
         // eslint-disable-next-line no-console
-        console.log(input)
-        //метод билдера, принимает значение чекбокса, собирает выбранные, посылает запрос на бэк
-        //обновить через innerhtml
+        console.log(clickedBtn)
+
     }
 
+
     init(){
-        this.inputs.forEach((input) => {
-            input.addEventListener("change", this.checkboxChanged.bind(this, input))
+        this.btns.forEach((btn) => {
+            btn.addEventListener("click", this.buttonClick.bind(this, btn))
         })
     }
 }

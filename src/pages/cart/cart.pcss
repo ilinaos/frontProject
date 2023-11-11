@@ -6,8 +6,10 @@
 .order-form {
     background: linear-gradient(114deg, var(--gradient-first), var(--gradient-second));
     border-radius: 25px;
-    padding: 56px;
+    padding: 2em;
     width: 30%;
+    height: fit-content;
+
 }
 
 .order-item {
@@ -24,4 +26,43 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+
+.isCentred{
+    background: transparent;
+    text-align: center;
+}
+
+.input{
+    border-radius: 10px;
+    width: 100%;
+    height: 3em;
+    outline: none;
+    border: none;
+}
+
+.money{
+    font-weight: 700;
+    &::after{
+        content:'\20BD';
+    }
+}
+
+.toCatalog{
+    margin-top: 3em;
+    a {
+        font-weight: 600;
+        color: var(--accent-primary);
+    }
+    a::before{
+        content: "";
+        display: inline-block;
+        position: relative;
+        border: solid var(--accent-primary);
+        border-width: 0 2px 2px 0;
+        transform: rotate(135deg);
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+    }
 }

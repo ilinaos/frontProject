@@ -29,16 +29,16 @@ export default () => {
           <form class="order-form">          
           <h2 class="order-item">Итого</h2>
           <div class="order-info order-item">
-          <p class="order-item">3 товара</p><p class="order-item">24 000 руб</p>
+          <p class="order-item">3 товара</p><p class="order-item money">24 000</p>
           </div>
-          <label  class="order-item"><p class="order-item">Промокод</p><p class="order-item"><input type="text" placeholder="Введите промокод"></p></label>
+          <label  class="order-item"><p class="order-item">Промокод</p><p class="order-item"><input class="input" type="text" placeholder="Введите промокод"></p></label>
           <div  class="order-info order-item ">
-          <p class="order-item ">Итоговая сумма</p><p class="order-item">24 000 руб</p>
+          <p class="order-item ">Итоговая сумма</p><p class="order-item money">24 000</p>
           </div>
-          <input type="submit" value="Оформить заказ"  class="button">
+          <div class="isCentred"><input type="submit" value="Оформить заказ"  class="button"></div>
 </form>
           </div>
-          <p class="to-catalog"><a href="../../../catalog.html">Продолжить покупки</a></p>
+          <p class="toCatalog"><a href="../../../catalog.html">Продолжить покупки</a></p>
           </div>
              ${Footer(
             {
