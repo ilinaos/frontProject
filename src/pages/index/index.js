@@ -43,7 +43,7 @@ ${Slider()}
 </div>
 <div class="${getClassName("FAQ", "item", extraClasses)} 'aboutCourse' " ${getAttrs(extraAttrs)}>
 <h2 class="${getClassName("FAQ", "header", extraClasses)} " ${getAttrs(extraAttrs)}>Как пройти курс</h2>
-<div>
+<div class="howToSignUp">
     <div>
         <p class="${getClassName("FAQ", "text", extraClasses)} " ${getAttrs(extraAttrs)}>Записывайтесь и получайте новые знания! Делайте репост и отправляйте друзьям, которым эта новость будет полезна.</p>
         <p class="${getClassName("FAQ", "miniHeader", extraClasses)} " ${getAttrs(extraAttrs)}>Ждем вас на наших курсах!</p>

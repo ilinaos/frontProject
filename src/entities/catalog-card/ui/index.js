@@ -1,12 +1,6 @@
 import { commonComponentProps, getAttrs } from "../../../shared/lib/index.js";
 import { getBtn } from "../../../features/toCartButton/index.js";
-
-const testCard={
-    img: "./cardImg.png",
-    head: "Бесплатный офлайн курс",
-    goodName: "Frontend-разработчик",
-    btnText: "В корзину"
-}
+import { testCard } from "../../../shared/config/constants.js";
 
 export function catalogCard (props) {
     const {
@@ -20,8 +14,8 @@ export function catalogCard (props) {
     const cardMarkup=`
     <div class="${getClassName("", extraClasses)}">
     <img class="${getClassName("item", extraClasses)}" src="${testCard.img}"/>
-    <p class="${getClassName("item", extraClasses)}">${testCard.head}</p>
-    <p class="${getClassName("item", extraClasses)}">«${testCard.goodName}»</p>
+    <p class="${getClassName("item", extraClasses)}">${testCard.label}</p>
+    <p class="${getClassName("item", extraClasses)}">«${testCard.productName}»</p>
     ${getBtn(testCard.btnText)}
 </div>
     `;
