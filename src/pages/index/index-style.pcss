@@ -1,0 +1,47 @@
+.FAQ {
+    background: transparent;
+    color: var(--neutral-dark);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__item {
+        max-width: 45%;
+        background: transparent;
+
+
+        + .FAQ__item {
+            margin-left: 2em;
+        }
+    }
+
+    &__header {
+        font-size: 2em;
+        line-height: 1.1;
+        margin: 0.2em;
+
+        font-style: normal;
+        font-weight: 700;
+
+
+    }
+
+    &__miniHeader {
+        color: var(--accent-primary);
+        font-size: 1.5em;
+    //font-style: normal; font-weight: 700; line-height: 40px; /* 142.857% */
+    }
+
+    &__text {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+    }
+}
+
+.howToSignUp {
+    display: flex;
+    flex-direction: row;
+    background: var(--white);
+}

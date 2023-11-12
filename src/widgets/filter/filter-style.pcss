@@ -1,0 +1,27 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    max-width: 328px;
+    gap: 8px;
+
+    &__button {
+        border-radius: 100px;
+        margin: 0;
+        text-align: start;
+    }
+
+    ._isActive {
+        &_false {
+            background: var(--accent-primary-light);
+            color: var(--accent-primary);
+        }
+
+        &_true {
+            background: var(--accent-primary);
+        }
+
+    }
+
+
+}

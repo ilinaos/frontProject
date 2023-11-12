@@ -1,0 +1,31 @@
+.cartCard {
+    position: relative;
+    border-radius: 12px;
+    padding: 1em;
+    background: var(--neutral-grey);
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 184px;
+
+    p {
+        background: transparent;
+    }
+
+    &__item {
+        max-height: 144px;
+        background: transparent;
+
+        + .cartCard__item {
+            margin-left: 24px;
+        }
+    }
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    cursor: pointer;
+}
